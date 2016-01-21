@@ -54,7 +54,7 @@ public class Calculadora
         int sumador = 0;
         resultado = 0;
         if (a == b)  {
-            
+            resultado = a;
         }
         if (a < b)  {
             sumador = a;
@@ -65,7 +65,15 @@ public class Calculadora
             }
         }
         if (a > b)  {
-            
+            int c = a;
+            a = b;
+            b = c;
+            sumador = a;
+            resultado = a;
+            while (sumador <= b)  {
+                sumador++;
+                resultado = resultado + sumador;
+            }
         }
         return resultado;
     }
