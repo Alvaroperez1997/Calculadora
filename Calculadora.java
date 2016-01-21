@@ -8,7 +8,7 @@
 public class Calculadora
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int resultado;
 
     /**
      * Constructor for objects of class Calculadora
@@ -16,7 +16,7 @@ public class Calculadora
     public Calculadora()
     {
         // initialise instance variables
-        x = 0;
+        resultado = 0;
     }
 
     /**
@@ -45,5 +45,28 @@ public class Calculadora
             System.out.println(resultado);
             sumador++;
         }
+    }
+    
+    /**
+     * Devuelve el parametro si es primo o falso
+     */
+    public int sumValuesInterval(int a, int b) {
+        int sumador = 0;
+        resultado = 0;
+        if (a == b)  {
+            
+        }
+        if (a < b)  {
+            sumador = a;
+            resultado = a;
+            while (sumador <= b)  {
+                sumador++;
+                resultado = resultado + sumador;
+            }
+        }
+        if (a > b)  {
+            
+        }
+        return resultado;
     }
 }
