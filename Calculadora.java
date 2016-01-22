@@ -103,13 +103,16 @@ public class Calculadora
      * Metodo que permite multiplicar valores enteros
      */
     public int multiEntero(int a, int b) {
-        int resultado = -1;
-        if (a % 2 == 0 && b % 2 == 0) {
+        int resultado = 0;
+        if (a > 0 && b > 0) {
             int contador = 0;
             while (contador != a) {
-                resultado = b + b;
+                resultado = resultado + b;
                 contador++;
             }
+        }
+        else {
+            resultado = -1;
         }
         return resultado;
     }
