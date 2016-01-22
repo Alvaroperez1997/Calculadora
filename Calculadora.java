@@ -82,18 +82,35 @@ public class Calculadora
      * Metodo que dice si el parametro es primo o no
      */
     public boolean isPrime(int n) {
-        boolean esPrimo = false;
+        boolean esPrimo = true;
         int x = 2;
         if (n >= 1) {
-            while (x < n + 1) {
+            while (x != n && esPrimo == true) {
                 if (n % x == 0) {
-                    esPrimo = true;
+                    esPrimo = false;
                 }
+                x++;
             }
-            return esPrimo;
         }
         else {
             System.out.println("Error");
+            esPrimo = false;
         }
+        return esPrimo;
+    }
+    
+    /**
+     * Metodo que permite multiplicar valores enteros
+     */
+    public int multiEntero(int a, int b) {
+        int resultado = -1;
+        if (a % 2 == 0 && b % 2 == 0) {
+            int contador = 0;
+            while (contador != a) {
+                resultado = b + b;
+                contador++;
+            }
+        }
+        return resultado;
     }
 }
