@@ -77,4 +77,23 @@ public class Calculadora
         }
         return resultado;
     }
+    
+    /**
+     * Metodo que dice si el parametro es primo o no
+     */
+    public boolean isPrime(int n) {
+        boolean esPrimo = false;
+        int x = 2;
+        if (n >= 1) {
+            while (x < n + 1) {
+                if (n % x == 0) {
+                    esPrimo = true;
+                }
+            }
+            return esPrimo;
+        }
+        else {
+            System.out.println("Error");
+        }
+    }
 }
